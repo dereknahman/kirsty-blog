@@ -1,0 +1,11 @@
+<h1>My Knitting Projects</h1>
+
+<ul>
+    {% for project in ravelry %}
+    <li>
+        {{ project.name }}: <img src="{{ project.first_photo.medium_url }}" />
+    </li>
+    {% else %}
+    <li>No projects found.</li>
+    {% endfor %}
+</ul>

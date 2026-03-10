@@ -1,7 +1,7 @@
 <h1>My Knitting Projects</h1>
 
 <ul>
-    {% for project in ravelry %}
+    {% for project in ravelryProjects %}
     <li>
         {{ project.name }}: <img src="{{ project.first_photo.medium_url }}" />
     </li>

@@ -3,7 +3,7 @@ export default async function () {
     const apiPassword = process.env.RAVELRY_PASSWORD;
     const user = process.env.RAVELRY_USER;
 
-    //TODO: Add old projects from the old account
+    // TODO: Add old projects from the old account
 
     const auth = Buffer.from(`${apiUsername}:${apiPassword}`).toString(
         "base64"
@@ -20,6 +20,5 @@ export default async function () {
     );
 
     const json = await response.json();
-
     return json.projects;
 }

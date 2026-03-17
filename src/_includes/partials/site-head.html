@@ -4,18 +4,11 @@
         <div class="site-head__inner">
             <nav aria-label="Primary">
                 <ul class="nav__list">
+                    {% for item in navigation.items %}
                     <li>
-                        <a href="/">Home</a>
+                        <a href="{{ item.url }}">{{ item.text }}</a>
                     </li>
-                    <li>
-                        <a href="/knitting">Work</a>
-                    </li>
-                    <li>
-                        <a href="/reading">Reading</a>
-                    </li>
-                    <li>
-                        <a href="/now">Now</a>
-                    </li>
+                    {% endfor %}
                 </ul>
             </nav>
         </div>

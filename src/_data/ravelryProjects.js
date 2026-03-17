@@ -1,3 +1,5 @@
+// TODO: maybe I should use 11ty Fetch instead?
+
 export default async function () {
     const apiUsername = process.env.RAVELRY_USERNAME;
     const apiPassword = process.env.RAVELRY_PASSWORD;
@@ -6,7 +8,7 @@ export default async function () {
     // TODO: Add old projects from the old account
 
     const auth = Buffer.from(`${apiUsername}:${apiPassword}`).toString(
-        "base64"
+        "base64",
     );
 
     const response = await fetch(
@@ -16,7 +18,7 @@ export default async function () {
                 Authorization: `Basic ${auth}`,
                 "User-Agent": "eleventy-blog",
             },
-        }
+        },
     );
 
     const json = await response.json();

@@ -1,5 +1,5 @@
 export default {
-    name: "Kirsty",
-    description: "A blog, some month notes, sewing, and knitting.",
+    title: "Kirsty's Blog",
+    description: "My home on the web",
     url: "https://example.com",
 };

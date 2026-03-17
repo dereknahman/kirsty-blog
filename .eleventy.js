@@ -1,18 +1,18 @@
-import 'dotenv/config';
+import "dotenv/config";
 
-export default function(eleventyConfig) {
+export default function (eleventyConfig) {
+    // pass files from these directories to _site
+    eleventyConfig.addPassthroughCopy("src/styles");
+    eleventyConfig.addPassthroughCopy("src/images");
 
-  eleventyConfig.addPassthroughCopy("src/styles");
-
-  return {
-    dir: {
-      input: "src",
-      output: "_site",
-      includes: "_includes",
-      data: "_data"
-    },
+    return {
+        dir: {
+            input: "src",
+            output: "_site",
+            includes: "_includes",
+            data: "_data",
+        },
         markdownTemplateEngine: "njk",
-        dataTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
-  };
+    };
 }

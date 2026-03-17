@@ -1,8 +1,4 @@
 ---
-layout: layouts/base.html
-title: Home
+title: "Hello, world"
+layout: "layouts/home.html"
 ---
-
-<h1>Welcome to my Eleventy site</h1>
-
-<p>This is the home page.</p>
